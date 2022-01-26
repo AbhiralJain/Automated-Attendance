@@ -385,7 +385,6 @@ class _ClassesState extends State<Classes> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    print(MediaQuery.of(context).size.width);
     setState(() {
       if (MediaQuery.of(context).size.width < 250) {
         rows = 1;
