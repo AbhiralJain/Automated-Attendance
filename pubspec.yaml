@@ -1,0 +1,40 @@
+name: attendance
+description: An automated attendance app
+
+publish_to: 'CrossPlat'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.15.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  path_provider: ^2.0.8
+  permission_handler: ^8.3.0
+  excel: ^2.0.0-null-safety-3
+  share_plus: ^3.0.4
+  open_file: ^3.2.1
+  hive: ^2.0.5
+  rflutter_alert: ^2.0.4
+  intl: ^0.17.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+  hive_generator: ^1.1.1
+  build_runner: ^2.1.7
+  desktop_drop: ^0.3.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Medium.ttf
+        - asset: assets/fonts/Montserrat-Bold.ttf
+        - asset: assets/fonts/Montserrat-MediumItalic.ttf
+        - asset: assets/fonts/Montserrat-BoldItalic.ttf

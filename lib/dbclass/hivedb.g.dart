@@ -1,0 +1,55 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'hivedb.dart';
+
+// **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class ClassesTable extends TypeAdapter<ClassDB> {
+  @override
+  final int typeId = 1;
+
+  @override
+  ClassDB read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return ClassDB()
+      ..oname = fields[0] as String?
+      ..cname = fields[1] as String?
+      ..sname = fields[2] as String?
+      ..epath = fields[3] as String?
+      ..count = fields[4] as int?
+      ..students = (fields[5] as List?)?.cast<String>();
+  }
+
+  @override
+  void write(BinaryWriter writer, ClassDB obj) {
+    writer
+      ..writeByte(6)
+      ..writeByte(0)
+      ..write(obj.oname)
+      ..writeByte(1)
+      ..write(obj.cname)
+      ..writeByte(2)
+      ..write(obj.sname)
+      ..writeByte(3)
+      ..write(obj.epath)
+      ..writeByte(4)
+      ..write(obj.count)
+      ..writeByte(5)
+      ..write(obj.students);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ClassesTable &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
